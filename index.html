@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087f52">
+<title>Riski Sehat Wal Afiat — Makan Sehat, Hidup Lebih Baik</title>
+<style>
+:root{--green:#087f52;--green2:#13a86b;--lime:#a8e063;--ink:#17352b;--muted:#667b72;--paper:#f6faf7;--line:#e2ece5;--white:#fff;--shadow:0 12px 35px #123d2610}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+header{height:74px;background:#ffffffed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;position:sticky;top:0;z-index:20}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}.brand-mark{display:grid;place-items:center;width:42px;height:42px;background:#e5f7e9;border-radius:14px;font-size:25px}.brand strong{display:block;font-size:17px;letter-spacing:-.4px}.brand small{display:block;color:var(--muted);font-size:11px;margin-top:2px}.navlinks{display:flex;gap:25px;align-items:center}.navlinks a{color:#365348;text-decoration:none;font-size:13px;font-weight:650}.navlinks a:hover{color:var(--green)}.nav-actions{display:flex;gap:9px;align-items:center}.btn{border:0;border-radius:999px;padding:11px 17px;background:var(--green);color:white;font-weight:750;font-size:13px;box-shadow:0 5px 14px #087f5220}.btn:hover{background:#056944;transform:translateY(-1px)}.btn.light{background:#eaf7ed;color:var(--green);box-shadow:none}.menu-toggle{display:none;background:white;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(100deg,#082d20 0%,#0b5838 53%,#123d2a 100%);color:white}.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid #ffffff1b;border-radius:50%;right:-100px;top:-210px;box-shadow:0 0 0 55px #ffffff08,0 0 0 110px #ffffff06;pointer-events:none}.hero-grid{min-height:410px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:30px;padding-top:44px;padding-bottom:44px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:99px;background:#c0f28b1c;color:#c8f7a6;font-size:12px;font-weight:800;letter-spacing:.3px}.hero h1{font-size:clamp(36px,5vw,59px);line-height:1.03;letter-spacing:-2.3px;margin:19px 0 14px}.hero h1 span{color:#b9ef79}.hero p{max-width:520px;color:#e1f0e7;line-height:1.7;margin:0 0 22px;font-size:15px}.searchbar{display:flex;max-width:570px;gap:8px;padding:6px;background:white;border-radius:999px;box-shadow:0 12px 30px #001b1030}.searchbar input{min-width:0;flex:1;border:0;outline:0;padding:0 13px;color:var(--ink);background:transparent;font-size:13px}.searchbar button{border:0;border-radius:999px;background:var(--green2);color:white;padding:12px 21px;font-weight:800}.hero-points{display:flex;gap:17px;flex-wrap:wrap;margin-top:24px;color:#e5f5e9;font-size:11px;font-weight:650}.hero-points span{display:flex;align-items:center;gap:7px}.hero-points b{font-size:17px}.hero-photo{min-height:300px;height:100%;max-height:340px;border-radius:25px;overflow:hidden;position:relative;box-shadow:0 24px 60px #001b103b;border:1px solid #ffffff2b}.hero-photo img{width:100%;height:100%;min-height:300px;object-fit:cover;display:block}.photo-label{position:absolute;bottom:15px;left:15px;background:#fffef2ee;color:var(--ink);padding:11px 15px;border-radius:14px;font-size:12px;font-weight:800;box-shadow:var(--shadow)}.photo-label small{display:block;font-weight:500;color:var(--muted);margin-top:3px}
+main{padding:30px 0 56px}.category-row{display:grid;grid-template-columns:repeat(8,minmax(75px,1fr));gap:10px;margin-bottom:34px}.cat{background:white;border:1px solid var(--line);border-radius:16px;padding:14px 7px 12px;display:flex;align-items:center;flex-direction:column;gap:8px;color:#466255;font-size:12px;font-weight:750;transition:.18s}.cat .emoji{display:grid;place-items:center;width:39px;height:39px;border-radius:13px;background:#eaf7ed;font-size:21px}.cat:hover,.cat.active{border-color:#8ed4a6;background:#f0fbf2;color:var(--green);box-shadow:0 7px 20px #087f520c}.section-head{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:18px}.section-head h2{margin:0;font-size:25px;letter-spacing:-.8px}.section-head p{margin:6px 0 0;color:var(--muted);font-size:13px}.section-head .count{color:var(--green);font-size:12px;font-weight:800}
+.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 275px;gap:22px;align-items:start}.food-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.food-card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 4px 14px #163b2505;transition:transform .2s,box-shadow .2s}.food-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.food-image{height:158px;position:relative;background:#e8f2e9;overflow:hidden}.food-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.food-card:hover .food-image img{transform:scale(1.04)}.kcal{position:absolute;top:10px;right:10px;background:#087f52ed;color:white;border-radius:99px;padding:7px 10px;font-size:11px;font-weight:850;box-shadow:0 4px 12px #0002}.food-body{padding:14px}.food-body h3{font-size:15px;margin:0 0 7px;letter-spacing:-.2px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}.tag{background:#eaf7ed;color:#087f52;border-radius:99px;padding:5px 8px;font-size:10px;font-weight:750}.food-body p{color:var(--muted);font-size:12px;line-height:1.55;margin:0 0 13px;min-height:38px}.food-footer{display:flex;align-items:center;justify-content:space-between;gap:8px}.food-footer small{font-size:10px;color:var(--muted)}.details-btn{border:0;background:#e9f7ed;color:var(--green);font-weight:800;border-radius:10px;padding:9px 11px;font-size:11px}.details-btn:hover{background:var(--green);color:white}
+.sidebar{display:grid;gap:15px}.side-card{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.quote-card{background:linear-gradient(140deg,#e8f8eb,#f5fbed);overflow:hidden;position:relative}.quote-card .quote-icon{font-size:25px}.quote-card h3{font-size:18px;line-height:1.4;margin:9px 0;color:#15533b}.quote-card p{font-size:12px;line-height:1.6;color:#557567;margin:0 0 14px}.side-title{font-size:14px;margin:0 0 14px}.nutrient{display:flex;align-items:center;gap:11px;padding:11px 0;border-bottom:1px solid var(--line)}.nutrient:last-child{border:0;padding-bottom:0}.nutrient-icon{width:39px;height:39px;flex-shrink:0;border-radius:13px;background:#edf8ee;display:grid;place-items:center;font-size:20px}.nutrient small{display:block;color:var(--muted);font-size:10px;margin-bottom:3px}.nutrient strong{font-size:13px}.tip{display:flex;gap:11px;align-items:flex-start}.tip img{width:72px;height:72px;object-fit:cover;border-radius:12px}.tip strong{font-size:12px}.tip p{font-size:11px;line-height:1.55;color:var(--muted);margin:5px 0 0}.empty{grid-column:1/-1;padding:35px;text-align:center;background:white;border:1px dashed #b9d7c2;border-radius:18px;color:var(--muted)}
+.disclaimer{font-size:11px;color:var(--muted);line-height:1.65;margin-top:20px;padding:13px 15px;background:#eef5ef;border-radius:12px}
+footer{background:#082d22;color:#e8f4eb;padding:27px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.foot .brand{color:white}.foot .brand small{color:#b9d4c5}.foot p{color:#b9d4c5;font-size:11px;margin:0}.footlinks{display:flex;gap:15px;flex-wrap:wrap}.footlinks a{color:#d4e7da;text-decoration:none;font-size:11px}
+.modal-backdrop{position:fixed;inset:0;background:#061c13a8;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal-backdrop.show{display:flex}.modal{width:min(520px,100%);max-height:90vh;overflow:auto;background:white;border-radius:22px;box-shadow:0 25px 80px #0004}.modal img{width:100%;height:220px;object-fit:cover;display:block}.modal-content{padding:22px}.modal-top{display:flex;justify-content:space-between;gap:12px;align-items:start}.modal h2{margin:0 0 6px;font-size:24px}.close{border:0;background:#edf5ef;border-radius:50%;width:36px;height:36px;font-size:21px;color:var(--ink)}.macro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:17px 0}.macro{padding:13px 10px;background:#f0f8f1;border-radius:13px;text-align:center}.macro strong{display:block;color:var(--green);font-size:19px}.macro small{color:var(--muted);font-size:11px}.modal-content p{font-size:13px;line-height:1.7;color:var(--muted)}.modal-content h4{margin-bottom:6px}.modal-content ul{font-size:13px;line-height:1.8;color:#466255;padding-left:20px}
+@media(max-width:980px){.navlinks{gap:13px}.content-grid{grid-template-columns:1fr}.sidebar{grid-template-columns:repeat(3,minmax(0,1fr))}.food-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-grid{gap:22px}.category-row{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:700px){.wrap{width:min(100% - 26px,1180px)}header{height:66px}.navlinks{display:none;position:absolute;top:65px;left:0;right:0;background:white;padding:18px 24px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.nav-actions .btn{padding:9px 12px;font-size:11px}.menu-toggle{display:block}.brand strong{font-size:14px}.brand small{font-size:10px}.hero-grid{grid-template-columns:1fr;padding-top:38px;padding-bottom:30px}.hero h1{font-size:43px}.hero-photo{min-height:220px;max-height:260px}.hero-photo img{min-height:220px}.hero-points{gap:12px}.category-row{gap:8px;margin-bottom:28px}.cat{font-size:11px;padding:11px 4px}.cat .emoji{width:34px;height:34px}.section-head h2{font-size:21px}.food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.food-image{height:130px}.food-body{padding:11px}.food-body h3{font-size:13px}.food-body p{font-size:11px;min-height:50px}.food-footer{align-items:flex-start;flex-direction:column}.sidebar{grid-template-columns:1fr}.side-card{padding:16px}.foot{align-items:flex-start;flex-direction:column}}
+@media(max-width:390px){.food-grid{grid-template-columns:1fr}.food-image{height:190px}.food-footer{align-items:center;flex-direction:row}.category-row{grid-template-columns:repeat(4,minmax(0,1fr))}.nav-actions .light{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#beranda" aria-label="Riski Sehat Wal Afiat beranda"><span class="brand-mark">🌿</span><span><strong>Riski Sehat Wal Afiat</strong><small>Makan Sehat, Hidup Lebih Baik</small></span></a>
+    <nav class="navlinks" id="navlinks"><a href="#beranda">Beranda</a><a href="#rekomendasi">Rekomendasi</a><a href="#kategori">Kategori</a><a href="#tips">Tips Sehat</a><a href="#tentang">Tentang</a></nav>
+    <div class="nav-actions"><button class="btn light" onclick="document.querySelector('#rekomendasi').scrollIntoView({behavior:'smooth'})">Jelajahi</button><button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button></div>
+  </div>
+</header>
+
+<section class="hero" id="beranda">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">🌱 MAKAN SEHAT, HIDUP SEHAT</span>
+      <h1>Riski Sehat<br><span>Wal Afiat.</span></h1>
+      <p>Temukan inspirasi makanan sehat lengkap dengan estimasi kalori dan nutrisi untuk membantu kamu membangun kebiasaan makan yang lebih baik.</p>
+      <form class="searchbar" id="searchForm"><input id="searchInput" type="search" placeholder="Cari makanan... (misal: ayam, sayur, buah)" aria-label="Cari makanan"><button type="submit">Cari ↗</button></form>
+      <div class="hero-points"><span><b>🥗</b> Rekomendasi sehat</span><span><b>🔥</b> Info kalori</span><span><b>💧</b> Tips gaya hidup</span></div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=90" alt="Salad sehat berwarna-warni" fetchpriority="high">
+      <div class="photo-label">Pilihan segar hari ini <small>Seimbang • Berwarna • Bernutrisi</small></div>
+    </div>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="category-row" id="kategori" aria-label="Filter kategori">
+    <button class="cat active" data-category="Semua"><span class="emoji">▦</span>Semua</button>
+    <button class="cat" data-category="Protein"><span class="emoji">🍗</span>Protein</button>
+    <button class="cat" data-category="Sayur"><span class="emoji">🥦</span>Sayur</button>
+    <button class="cat" data-category="Buah"><span class="emoji">🍓</span>Buah</button>
+    <button class="cat" data-category="Karbohidrat"><span class="emoji">🌾</span>Karbohidrat</button>
+    <button class="cat" data-category="Sarapan"><span class="emoji">🥣</span>Sarapan</button>
+    <button class="cat" data-category="Camilan"><span class="emoji">🥜</span>Camilan</button>
+    <button class="cat" data-category="Minuman"><span class="emoji">💧</span>Minuman</button>
+  </section>
+
+  <div class="section-head" id="rekomendasi">
+    <div><h2>🥗 Rekomendasi Makanan Sehat</h2><p>Pilihan lezat untuk menemani gaya hidup sehatmu.</p></div>
+    <span class="count" id="resultCount">12 pilihan</span>
+  </div>
+
+  <div class="content-grid">
+    <section>
+      <div class="food-grid" id="foodGrid" aria-live="polite"></div>
+      <div class="disclaimer">ℹ️ <strong>Catatan nutrisi:</strong> kalori dan makro di bawah adalah perkiraan per porsi, bukan nilai laboratorium. Angka dapat berubah menurut ukuran porsi, bahan, saus, minyak, dan cara memasak. Kebutuhan energi tiap orang berbeda.</div>
+    </section>
+    <aside class="sidebar">
+      <div class="side-card quote-card"><div class="quote-icon">🌿</div><h3>Sehat itu bukan sekadar diet, tapi investasi untuk masa depan.</h3><p>Mulai dari satu pilihan kecil hari ini. Konsisten lebih penting daripada harus sempurna.</p><button class="btn" onclick="document.querySelector('#rekomendasi').scrollIntoView({behavior:'smooth'})">Mulai Pilih Makanan ↗</button></div>
+      <div class="side-card"><h3 class="side-title">📊 Panduan Nutrisi Umum</h3><div class="nutrient"><span class="nutrient-icon">🔥</span><span><small>Energi harian</small><strong>Kebutuhan tiap orang berbeda</strong></span></div><div class="nutrient"><span class="nutrient-icon">🍳</span><span><small>Sumber protein</small><strong>Telur, ikan, tahu, tempe</strong></span></div><div class="nutrient"><span class="nutrient-icon">🥬</span><span><small>Serat & mikronutrien</small><strong>Sayur dan buah beragam</strong></span></div><div class="nutrient"><span class="nutrient-icon">💧</span><span><small>Hidrasi</small><strong>Minum secara teratur</strong></span></div></div>
+      <div class="side-card" id="tips"><h3 class="side-title">💡 Tips Sehat Hari Ini</h3><div class="tip"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=300&q=85" alt="Makanan seimbang"><div><strong>Isi piring dengan beragam warna</strong><p>Padukan sayur, buah, sumber protein, dan karbohidrat sesuai kebutuhanmu.</p></div></div></div>
+    </aside>
+  </div>
+</main>
+
+<footer id="tentang"><div class="wrap foot"><a class="brand" href="#beranda"><span class="brand-mark">🌿</span><span><strong>Riski Sehat Wal Afiat</strong><small>Makan Sehat, Hidup Lebih Baik</small></span></a><div class="footlinks"><a href="#beranda">Beranda</a><a href="#rekomendasi">Rekomendasi</a><a href="#kategori">Kategori</a><a href="#tips">Tips Sehat</a></div><p>© <span id="year"></span> Riski Sehat Wal Afiat. Pilih sehat, nikmati hidup.</p></div></footer>
+
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal"><img id="modalImage" src="" alt=""><div class="modal-content"><div class="modal-top"><div><h2 id="modalTitle">Nama makanan</h2><div class="tags" id="modalTags"></div></div><button class="close" id="closeModal" aria-label="Tutup detail">×</button></div><div class="macro-grid"><div class="macro"><strong id="modalKcal">0</strong><small>kkal / porsi</small></div><div class="macro"><strong id="modalProtein">0 g</strong><small>Protein</small></div><div class="macro"><strong id="modalCarbs">0 g</strong><small>Karbohidrat</small></div></div><p id="modalDescription"></p><h4>Tips penyajian</h4><ul id="modalTips"></ul><p><strong>Catatan:</strong> nilai nutrisi merupakan estimasi dan bisa berbeda menurut bahan serta ukuran porsi.</p></div></div>
+</div>
+<script>
+const foods = [
+ {name:"Dada Ayam Panggang",cat:"Protein",kcal:165,protein:31,carbs:0,fat:4,tags:["Tinggi protein","Rendah karbo"],desc:"Sumber protein yang membantu pemeliharaan otot dan membuat makan terasa lebih mengenyangkan.",portion:"100 g matang",img:"photo-1532550907401-a500c9a57435",tips:["Panggang dengan sedikit minyak.","Bumbui dengan bawang putih, lada, lemon, dan rempah.","Padukan dengan sayuran dan karbohidrat sesuai kebutuhan."]},
+ {name:"Salad Quinoa",cat:"Karbohidrat",kcal:220,protein:8,carbs:34,fat:6,tags:["Serat","Nutrisi beragam"],desc:"Quinoa menyediakan karbohidrat dan protein nabati; sayuran menambah serat dan mikronutrien.",portion:"1 mangkuk",img:"photo-1512621776951-a57141f2eefd",tips:["Tambahkan tomat, mentimun, dan sayuran hijau.","Gunakan dressing secukupnya.","Bilas quinoa sebelum dimasak."]},
+ {name:"Roti Gandum & Alpukat",cat:"Sarapan",kcal:230,protein:7,carbs:27,fat:12,tags:["Serat","Lemak tak jenuh"],desc:"Roti gandum memberikan karbohidrat dan serat, sedangkan alpukat mengandung lemak tak jenuh.",portion:"1 lembar + ½ alpukat kecil",img:"photo-1525351484163-7529414344d8",tips:["Pilih roti dengan gandum utuh sebagai bahan utama.","Tambahkan telur jika ingin protein lebih tinggi.","Perhatikan ukuran porsi alpukat."]},
+ {name:"Sup Sayuran",cat:"Sayur",kcal:95,protein:4,carbs:16,fat:2,tags:["Sayuran beragam","Hangat"],desc:"Sup sayuran membantu menambah variasi sayur dan cairan; kandungan energi tergantung bahan dan minyak.",portion:"1 mangkuk",img:"photo-1547592180-85f173990554",tips:["Gunakan wortel, buncis, kol, dan tomat.","Batasi garam berlebihan.","Tambahkan tahu atau kacang-kacangan untuk protein."]},
+ {name:"Salad Buah Segar",cat:"Buah",kcal:120,protein:2,carbs:29,fat:1,tags:["Vitamin","Serat"],desc:"Buah menyediakan serat, vitamin, mineral, dan rasa manis alami. Kandungan berbeda menurut jenis buah.",portion:"1 mangkuk (±200 g)",img:"photo-1490474418585-ba9bad8fd0ea",tips:["Pilih buah utuh yang beragam warna.","Gunakan yoghurt tawar jika ingin topping creamy.","Batasi sirup atau susu kental manis tambahan."]},
+ {name:"Ikan Salmon Panggang",cat:"Protein",kcal:206,protein:22,carbs:0,fat:12,tags:["Omega-3","Protein"],desc:"Salmon merupakan sumber protein dan lemak omega-3. Kalori berubah sesuai potongan dan minyak yang digunakan.",portion:"100 g matang",img:"photo-1467003909585-2f8a72700288",tips:["Panggang atau kukus dengan bumbu sederhana.","Sajikan dengan sayur dan sumber karbohidrat.","Pastikan ikan matang dengan baik."]},
+ {name:"Nasi Merah",cat:"Karbohidrat",kcal:216,protein:5,carbs:45,fat:2,tags:["Karbohidrat","Serat"],desc:"Nasi merah adalah sumber energi dan memiliki lebih banyak serat dibanding nasi putih pada porsi yang sebanding.",portion:"1 cangkir matang (±195 g)",img:"photo-1512058564366-18510be2db19",tips:["Sesuaikan porsi dengan rasa lapar dan aktivitas.","Padukan dengan protein dan sayuran.","Simpan nasi matang dengan aman dan dinginkan segera."]},
+ {name:"Kacang Almond",cat:"Camilan",kcal:164,protein:6,carbs:6,fat:14,tags:["Lemak tak jenuh","Praktis"],desc:"Almond mengandung lemak tak jenuh, protein, dan serat. Kacang padat energi, jadi porsi tetap perlu diperhatikan.",portion:"28 g (segenggam kecil)",img:"photo-1508061253366-f7da158b6d46",tips:["Pilih yang tawar atau rendah garam.","Simpan dalam wadah tertutup.","Hindari jika memiliki alergi kacang."]},
+ {name:"Oatmeal Pisang",cat:"Sarapan",kcal:250,protein:8,carbs:44,fat:5,tags:["Serat","Sarapan praktis"],desc:"Oat menyediakan serat beta-glukan; pisang menambah rasa manis, karbohidrat, dan kalium.",portion:"1 mangkuk",img:"photo-1517673132405-a56a62b18caf",tips:["Masak oat dengan air atau susu pilihan.","Tambahkan pisang dan sedikit kayu manis.","Pilih topping tanpa gula tambahan berlebihan."]},
+ {name:"Telur Rebus",cat:"Protein",kcal:78,protein:6,carbs:1,fat:5,tags:["Protein","Sederhana"],desc:"Telur menyediakan protein berkualitas serta beberapa vitamin dan mineral dalam porsi yang praktis.",portion:"1 butir besar",img:"photo-1525351484163-7529414344d8",tips:["Masak hingga putih dan kuning telur matang sesuai anjuran keamanan pangan.","Padukan dengan sayur atau roti gandum.","Simpan telur matang di lemari pendingin bila tidak segera dimakan."]},
+ {name:"Tumis Brokoli",cat:"Sayur",kcal:85,protein:4,carbs:11,fat:4,tags:["Serat","Vitamin"],desc:"Brokoli mengandung serat, vitamin C, dan folat. Kalori hidangan bergantung pada jumlah minyak dan saus.",portion:"1 mangkuk",img:"photo-1459411552884-841db9b3cc2a",tips:["Masak sebentar agar tekstur tetap renyah.","Gunakan minyak secukupnya.","Tambahkan tahu atau tempe untuk melengkapi protein."]},
+ {name:"Air Putih",cat:"Minuman",kcal:0,protein:0,carbs:0,fat:0,tags:["Tanpa kalori","Hidrasi"],desc:"Air putih membantu menjaga hidrasi dan tidak mengandung kalori. Kebutuhan cairan dipengaruhi cuaca, aktivitas, dan kondisi tubuh.",portion:"1 gelas (250 ml)",img:"photo-1548839140-29a749e1cf4d",tips:["Minum secara teratur sepanjang hari.","Bawa botol minum saat beraktivitas.","Ikuti saran tenaga kesehatan jika memiliki pembatasan cairan."]}
+];
+const imgUrl = id => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=90`;
+let activeCategory="Semua", query="";
+const foodGrid=document.getElementById("foodGrid");
+function renderFoods(){
+ const filtered=foods.filter(f=>(activeCategory==="Semua"||f.cat===activeCategory|| (activeCategory==="Camilan"&&["Camilan","Buah"].includes(f.cat))) && (f.name+" "+f.cat+" "+f.tags.join(" ")+" "+f.desc).toLowerCase().includes(query.toLowerCase()));
+ document.getElementById("resultCount").textContent=`${filtered.length} pilihan`;
+ if(!filtered.length){foodGrid.innerHTML='<div class="empty"><div style="font-size:32px">🔎</div><strong>Belum ada makanan yang cocok.</strong><p>Coba kata kunci lain atau pilih kategori “Semua”.</p></div>';return}
+ foodGrid.innerHTML=filtered.map(f=>`<article class="food-card"><div class="food-image"><img src="${imgUrl(f.img)}" alt="${f.name}" loading="lazy"><span class="kcal">${f.kcal} kkal</span></div><div class="food-body"><h3>${f.name}</h3><div class="tags">${f.tags.slice(0,2).map(t=>`<span class="tag">${t}</span>`).join("")}</div><p>${f.desc}</p><div class="food-footer"><small>Per ${f.portion}</small><button class="details-btn" data-food="${f.name}">Lihat detail ↗</button></div></div></article>`).join("");
+ foodGrid.querySelectorAll("[data-food]").forEach(b=>b.addEventListener("click",()=>openFood(b.dataset.food)));
+}
+function openFood(name){
+ const f=foods.find(x=>x.name===name);if(!f)return;
+ document.getElementById("modalImage").src=imgUrl(f.img);document.getElementById("modalImage").alt=f.name;
+ document.getElementById("modalTitle").textContent=f.name;
+ document.getElementById("modalTags").innerHTML=`<span class="tag">${f.cat}</span><span class="tag">Per ${f.portion}</span>`;
+ document.getElementById("modalKcal").textContent=f.kcal;document.getElementById("modalProtein").textContent=f.protein+" g";document.getElementById("modalCarbs").textContent=f.carbs+" g";
+ document.getElementById("modalDescription").textContent=f.desc+` Perkiraan lemak: ${f.fat} g per porsi.`;
+ document.getElementById("modalTips").innerHTML=f.tips.map(t=>`<li>${t}</li>`).join("");
+ document.getElementById("modalBackdrop").classList.add("show");document.body.style.overflow="hidden";
+}
+function closeModal(){document.getElementById("modalBackdrop").classList.remove("show");document.body.style.overflow=""}
+document.getElementById("searchForm").addEventListener("submit",e=>{e.preventDefault();query=document.getElementById("searchInput").value.trim();renderFoods();document.getElementById("rekomendasi").scrollIntoView({behavior:"smooth",block:"start"})});
+document.getElementById("searchInput").addEventListener("input",e=>{query=e.target.value.trim();renderFoods()});
+document.querySelectorAll(".cat").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.category;document.querySelectorAll(".cat").forEach(x=>x.classList.toggle("active",x===b));renderFoods()}));
+document.getElementById("closeModal").addEventListener("click",closeModal);
+document.getElementById("modalBackdrop").addEventListener("click",e=>{if(e.target.id==="modalBackdrop")closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+document.getElementById("menuToggle").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
+document.querySelectorAll("#navlinks a").forEach(a=>a.addEventListener("click",()=>document.getElementById("navlinks").classList.remove("open")));
+document.getElementById("year").textContent=new Date().getFullYear();
+renderFoods();
+</script>
+</body>
+</html>
